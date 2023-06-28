@@ -33,7 +33,9 @@ const Runtimer = () => {
   timeStart = setInterval(() => {
     timecount.innerHTML = numb;
     numb--;
+
     // if time is 00 then Result will be shown directly.
+
     if (numb == 0) {
       QuestionBox.classList.remove("activeQuiz");
       
@@ -51,7 +53,7 @@ const Runtimer = () => {
 
 
 
-// Show Result Box After our 10 questions finished
+// Show Result Box After our 10 questions finished...
 function ShowResultSection(){
 categories.classList.remove("activeInfo");
 QuestionBox.classList.remove("activeQuiz");
@@ -85,7 +87,7 @@ console.log("working");
 
 
 
- // Window reload at result page
+ // Window reload at result page after clicking on home button
 home.addEventListener("click", () => {
   setTimeout(() => {
     window.location.reload(true); 

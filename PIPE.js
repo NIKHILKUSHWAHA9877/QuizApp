@@ -3,11 +3,13 @@ let next2 = document.querySelector("#next2");
 
 // on click of pipe categorie this function will be executed
 pipe.onclick = () => {
-  // const show = document.querySelector(".input-val").value;
-  // if(show == ""){
-  //   alert("Please Enter Name to Move Ahead");
-  //   return;
-  // }
+  // enter name
+  const show = document.querySelector(".input-val").value;
+  if(show == ""){
+    alert("Please Enter Name to Move Ahead");
+    return;
+  } // without name alert will be pop up
+
   categories.classList.add("disp");
   QuestionBox.classList.add("activeQuiz");//for showing question section
   document.querySelector(".title-bar").innerHTML = "PIPE AND CRISTRENS";
@@ -16,10 +18,11 @@ pipe.onclick = () => {
   printname();
   Runtimer();
 };
+// by this code when will click on next button new quection will come
 // This next2 button will work only for changing next question of pipe
 next2.onclick = () => {
   if (question_count < PIPES.length - 1) {
-    question_count++;
+    question_count++;   
     question_number++;
     count++;
     score.innerHTML = "Score: " + userscore;
@@ -28,7 +31,7 @@ next2.onclick = () => {
   }
   else {
     count++;
-    ShowResultSection();
+    ShowResultSection();   //after questions finished this Result box will be shown 
   }
 };
 showQuestionpipes = (index) => {
@@ -50,13 +53,13 @@ showQuestionpipes = (index) => {
     "</span>";
   question_text.innerHTML = showQuestion;
   answer_options.innerHTML = showOptions;
-  const option = answer_options.querySelectorAll(".option");
+  const option = answer_options.querySelectorAll(".option");  //loop will run until end of questions 
   for (let i = 0; i < option.length; i++) {
     option[i].setAttribute("onclick", "optionSelectedpipe(this)");//adding onclick event on options
   }
 };
 
-
+// green and red color will be added if answer is wrong or corrrect by this below code
 //if answer is correct background color of answer will be green
 function optionSelectedpipe(answer) {
   let userAns = answer.textContent;
@@ -81,10 +84,11 @@ userscore +=1;
       }
     }
   }
+  /* when we click on 1 option then this disabled function will run */
   for (let i = 0; i < alloptions; i++) {
     answer_options.children[i].classList.add("disabled");
   }
-
+  // after clicking on options this show next button function will run
   next2.classList.add("show");
 }
 

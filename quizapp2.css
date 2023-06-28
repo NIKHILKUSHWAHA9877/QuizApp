@@ -1,32 +1,33 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,500&family=Prompt&display=swap');
 
-*{
+* {
 
-   margin: 0; 
-   padding: 0;
-   font-family: "Trirong", serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Trirong", serif;
 }
+
 body {
-    background: url("https://images.pexels.com/photos/7792504/pexels-photo-7792504.jpeg" );
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center/cover;
+  background: url("https://images.pexels.com/photos/7792504/pexels-photo-7792504.jpeg");
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center/cover;
 
-  }
+}
 
- .cont{
-/* padding:  45% !important;  */
-  } 
+.cont {
+  /* padding:  45% !important;  */
+}
 
-.categories-box.activeinfo , .Question-box.activeQuiz , 
+.categories-box.activeinfo,
+.Question-box.activeQuiz,
 .result-container.activeResult {
   z-index: 5;
   opacity: 1;
   pointer-events: auto;
-   transform: translate  scale(2); 
-  
+  transform: translate scale(2);
+
 }
 
 .categories-box,
@@ -40,56 +41,54 @@ body {
 
 
 .categories-box {
-    display: flex;
-    align-items: center;
-    /* pointer-events: none; */
-    padding: 20px;
-    flex-direction: column;
-    justify-content: flex-start;
-    background-color: whitesmoke;
-    transition: all 0.5s ease-in;
-  
-text-align: center;
-border: solid black 1px;
-border-radius: 10px;
+  display: flex;
+  align-items: center;
+  /* pointer-events: none; */
+  padding: 20px;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: whitesmoke;
+  transition: all 0.5s ease-in;
+
+  text-align: center;
+  border: solid black 1px;
+  border-radius: 10px;
 }
 
+/* question box  css */
+.Question-box {
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.9);
+  width: 50vw;
+  height: auto;
+  border: 2px solid #ccc;
+  padding: 30px;
+  background-color: whitesmoke;
+  border-radius: 30px;
+  transition: all 0.5s ease-in;
 
-.Question-box{
- 
-    opacity: 0;
-    pointer-events: none;
-    transform: translate(-50%, -50%) scale(0.9);
-    width: 50vw;
-    height: auto;
-    border: 2px solid #ccc;
-    padding: 30px;
-    background-color: whitesmoke;
-    border-radius: 30px;
-    transition: all 0.5s ease-in;
 
+  transform:
+    rotate3d(.5, -.866, 0, 15deg) rotate(1deg);
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
 
-    transform:
-    rotate3d(.5,-.866,0,15deg)
-    rotate(1deg);
-    position: relative;
-margin-left: auto;
-margin-right: auto;
-  
   box-shadow:
-    2em 4em 6em -2em rgba(0,0,0,.5),
-    1em 2em 3.5em -2.5em rgba(0,0,0,.5);
+    2em 4em 6em -2em rgba(0, 0, 0, .5),
+    1em 2em 3.5em -2.5em rgba(0, 0, 0, .5);
   transition:
     transform .4s ease,
     box-shadow .4s ease;
+
   &:hover {
     transform:
-      rotate3d(0,0,0,0deg)
-      rotate(0deg);
-  
-  
+      rotate3d(0, 0, 0, 0deg) rotate(0deg);
+
+
   }
-  }
+}
 
 
 
@@ -134,8 +133,8 @@ transition:0.5s ease all;
 }
  */
 
-
-.result-container{
+/* result box css after when questions will finish */
+.result-container {
   opacity: 0;
   pointer-events: none;
   transform: translate(-50%, -50%) scale(0.9);
@@ -151,9 +150,7 @@ transition:0.5s ease all;
   font-size: 20px;
   text-align: left;
 
-
- 
-  }
+}
 
 /* button {
   padding: 9px;
@@ -164,6 +161,7 @@ transition:0.5s ease all;
   font-weight: bold;
 } */
 
+
 button:hover {
   background-color: #2dade2;
   color: whitesmoke;
@@ -171,7 +169,7 @@ button:hover {
 
 
 .result-container h2 {
- 
+
   font-family: 'Press Start 2P', cursive;
   color: rgb(78, 167, 240);
   border-bottom: 0.1px solid grey;
@@ -189,102 +187,106 @@ button:hover {
 }
 
 
-.logo img{
-width: 60px;
-padding: 20px;
+.logo img {
+  width: 60px;
+  padding: 20px;
 }
 
-.header-style{
+.header-style {
   font-family: 'Press Start 2P', cursive;
 
-padding: 10px;
-color: #2dade2;
+  padding: 10px;
+  color: #2dade2;
 }
 
-hr{
-   
-    margin: 0 auto;
-    margin-top: 40px;
-    width: 50%;
-    border: 0;
-    height: 2px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(122, 53, 53, 0.75), rgba(255, 255, 255, 0));
+hr {
+
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 50%;
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(122, 53, 53, 0.75), rgba(255, 255, 255, 0));
 }
 
-.upper-section > h3{
-padding: 10px;
-margin-bottom: 15px;
-font-family: 'Holtwood One SC', serif;
-letter-spacing: 1px;
+.upper-section>h3 {
+  padding: 10px;
+  margin-bottom: 15px;
+  font-family: 'Holtwood One SC', serif;
+  letter-spacing: 1px;
 }
 
-.user-input{
-    display: flex;
+.user-input {
+  display: flex;
 }
-.heading-bottom > h2{
+
+.heading-bottom>h2 {
   letter-spacing: 1px;
   font-family: 'Press Start 2P', cursive;
 
 }
- input[type="text"] {
+
+input[type="text"] {
   font-family: 'Press Start 2P', cursive;
-    width: 30vw;
-    padding: 12px 5px;
-    margin-top: 10px;
-    border: 1px solid black;
-    border-radius: 5px;
-    font-size: 18px;
-  }
+  width: 30vw;
+  padding: 12px 5px;
+  margin-top: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 18px;
+}
 
-  .submit-name button {
-    margin-top: 10px;
-    margin-left: 5px;
-    padding: 10px 20px;
-    border: 2px solid #2dade2;
-    border-radius: 7px;
-    cursor: pointer;
-    font-weight: bolder;
-    font-size: 16px;
-    transition: all 0.3s ease-in;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+.submit-name button {
+  margin-top: 10px;
+  margin-left: 5px;
+  padding: 10px 20px;
+  border: 2px solid #2dade2;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: bolder;
+  font-size: 16px;
+  transition: all 0.3s ease-in;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-  .btn-bottom{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-  .btn-bottom > button{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    border: 2px solid #2dade2;
-    padding: 10px;
-    margin: 10px;
-    width: 20vw;
-    font-weight: bold;
-    border-radius: 15px;
-    transition: 0.3s ease-in;
+.btn-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
 
-  }
+.btn-bottom>button {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: 2px solid #2dade2;
+  padding: 10px;
+  margin: 10px;
+  width: 20vw;
+  font-weight: bold;
+  border-radius: 15px;
+  transition: 0.3s ease-in;
 
-  .btn-bottom button:hover {
+}
 
-    color: black;
-  }
-  .backbtn button:hover {
-    background-color: #2dade2;
-    color: whitesmoke;
-  }
+.btn-bottom button:hover {
 
-  .backbtn > button{
-    padding: 12px;
-    border: 2px solid #2dade2;
-    border-radius: 10px;
-    margin-bottom: 7px;
-    font-weight: 500;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: all 0.2s ease-in-out;
-  }
+  color: black;
+}
+
+.backbtn button:hover {
+  background-color: #2dade2;
+  color: whitesmoke;
+}
+
+.backbtn>button {
+  padding: 12px;
+  border: 2px solid #2dade2;
+  border-radius: 10px;
+  margin-bottom: 7px;
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.2s ease-in-out;
+}
 
 /* .answer-options > .option{
   width: 100%;
@@ -307,7 +309,7 @@ flex-direction: column;
   padding: 10px;
   border-radius: 20px;
   font-family: 'Press Start 2P', cursive;
- 
+
 }
 
 /* Timer 00 seconds styled here */
@@ -325,21 +327,23 @@ fieldset {
   border: 3px solid rgb(236, 207, 133);
   text-align: justify;
   border-radius: 12px;
- 
+
 }
-.qucount > span{
+
+.qucount>span {
   font-family: 'Wallpoet', cursive;
   font-size: 20px !important;
 }
 
-/* questions displayed in here */
+
+/* questions number count displayed in here */
 legend {
   padding: 10px;
   border: 3px solid rgb(236, 207, 133);
   border-radius: 50%;
   text-align: center;
-  
 }
+
 
 .Question {
   padding: 20px;
@@ -347,6 +351,7 @@ legend {
   font-size: 30px;
 }
 
+/* questions displayed in here */
 .Question span {
   font-weight: 500;
 }
@@ -354,8 +359,8 @@ legend {
 /* answer options container styled here */
 .answer-options {
   width: 90%;
- margin-left: auto;
- margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 30px;
   display: grid;
   grid-gap: 15px;
@@ -365,72 +370,50 @@ legend {
 
 }
 
-.answer-options span{
+/* answer options displayed here */
+.answer-options span {
   font-family: 'Wallpoet', cursive;
   letter-spacing: 2px;
   line-height: 1.6rem;
   font-size: 23px;
-padding: 16px;
-border-radius: 13px;
-cursor: pointer;
-transition: 0.1s ease-in;
-font-weight: bolder;
-color: black;
+  padding: 16px;
+  border-radius: 13px;
+  cursor: pointer;
+  transition: 0.1s ease-in;
+  font-weight: bolder;
+  color: black;
 }
 
+/* if anser is correct this will run */
 .answer-options .correctAns {
   background-color: green;
   color: white;
   border-color: white;
 }
 
+/* if anser is wrong this will run */
 .answer-options .incorrectAns {
   background-color: tomato;
   color: white;
   border-color: white;
 }
 
+/* when we click on 1 option then this disabled function will run */
 .answer-options .disabled {
   pointer-events: none;
 }
 
 
 /* next button question change css */
-.next-button{
-display: flex;
-margin-top: 16px;
-margin-bottom: 15px;
-justify-content: center;
+.next-button {
+  display: flex;
+  margin-top: 16px;
+  margin-bottom: 15px;
+  justify-content: center;
 }
 
 
-#next{
-position: absolute;
-padding: 10px 15px;
-border: 2px solid rgb(99, 204, 245);
-border-radius: 10px;
-color: black;
-cursor: pointer;
-font-weight: bolder;
-transition: all 0.2s ease-in;
-opacity: 0;
-pointer-events: none;
-
-
-}
-
-
-
-
-#next.show {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-
-
-
-#next2{
+#next {
   position: absolute;
   padding: 10px 15px;
   border: 2px solid rgb(99, 204, 245);
@@ -441,78 +424,106 @@ pointer-events: none;
   transition: all 0.2s ease-in;
   opacity: 0;
   pointer-events: none;
-  
-  
-  }
-  #next2.show {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  #next3{
-    position: absolute;
-    padding: 10px 15px;
-    border: 2px solid rgb(99, 204, 245);
-    border-radius: 10px;
-    color: black;
-    cursor: pointer;
-    font-weight: bolder;
-    transition: all 0.2s ease-in;
-    opacity: 0;
-    pointer-events: none;
-    
-    
-    }
-    #next3.show {
-      opacity: 1;
-      pointer-events: auto;
-    }
 
 
-    #next4{
-      position: absolute;
-      padding: 10px 15px;
-      border: 2px solid rgb(99, 204, 245);
-      border-radius: 10px;
-      color: black;
-      cursor: pointer;
-      font-weight: bolder;
-      transition: all 0.2s ease-in;
-      opacity: 0;
-      pointer-events: none;
-      
-      
-      }
-      #next4.show {
-        opacity: 1;
-        pointer-events: auto;
-      }
+}
 
-      #next:hover {
-        background-color: rgb(99, 204, 245);
-        color: whitesmoke;
-      }
-      
-      #next2:hover {
-        background-color: rgb(99, 204, 245);
-        color: whitesmoke;
-      }
-      
-      #next3:hover {
-        background-color: rgb(99, 204, 245);
-        color: whitesmoke;
-      }
-      
-      #next4:hover {
-        background-color: rgb(99, 204, 245);
-        color: whitesmoke;
-      }
+
+#next.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
+
+#next2 {
+  position: absolute;
+  padding: 10px 15px;
+  border: 2px solid rgb(99, 204, 245);
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+  font-weight: bolder;
+  transition: all 0.2s ease-in;
+  opacity: 0;
+  pointer-events: none;
+
+
+}
+
+#next2.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#next3 {
+  position: absolute;
+  padding: 10px 15px;
+  border: 2px solid rgb(99, 204, 245);
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+  font-weight: bolder;
+  transition: all 0.2s ease-in;
+  opacity: 0;
+  pointer-events: none;
+
+
+}
+
+#next3.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+#next4 {
+  position: absolute;
+  padding: 10px 15px;
+  border: 2px solid rgb(99, 204, 245);
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+  font-weight: bolder;
+  transition: all 0.2s ease-in;
+  opacity: 0;
+  pointer-events: none;
+
+
+}
+
+#next4.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#next:hover {
+  background-color: rgb(99, 204, 245);
+  color: whitesmoke;
+}
+
+#next2:hover {
+  background-color: rgb(99, 204, 245);
+  color: whitesmoke;
+}
+
+#next3:hover {
+  background-color: rgb(99, 204, 245);
+  color: whitesmoke;
+}
+
+#next4:hover {
+  background-color: rgb(99, 204, 245);
+  color: whitesmoke;
+}
+
 /* next button question change css end */
 
 
 
 
-.answer-options:disabled{
+.answer-options:disabled {
   cursor: not-allowed;
   color: black;
 
@@ -521,7 +532,7 @@ pointer-events: none;
 
 /* categeories button design */
 
- .btnn{
+.btnn {
   align-items: center;
   background-color: #fee6e3;
   border: 2px solid #111;
@@ -530,7 +541,7 @@ pointer-events: none;
   color: #111;
   cursor: pointer;
   display: flex;
-  font-family: Inter,sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 16px;
   height: 48px;
   justify-content: center;
@@ -545,7 +556,7 @@ pointer-events: none;
   touch-action: manipulation;
 }
 
- .btnn:after {
+.btnn:after {
   background-color: #111;
   border-radius: 8px;
   content: "";
@@ -560,24 +571,25 @@ pointer-events: none;
   z-index: -1;
 }
 
- .btnn:hover:after {
+.btnn:hover:after {
   transform: translate(0, 0);
 }
 
- .btnn:active {
+.btnn:active {
   background-color: #ffdeda;
   outline: 0;
 }
 
- .btnn:hover {
+.btnn:hover {
   outline: 0;
 }
 
 @media (min-width: 768px) {
-   .btnn {
+  .btnn {
     padding: 0 40px;
   }
 }
+
 /* categeories button design end */
 
 
@@ -585,15 +597,16 @@ pointer-events: none;
 
 /* Questions options button design */
 .option {
-  --b: 3px;   /* border thickness */
-  --s: .45em; /* size of the corner */
+  --b: 3px;
+  /* border thickness */
+  --s: .45em;
+  /* size of the corner */
   --color: rgb(16, 129, 173);
   padding: calc(.5em + var(--s)) calc(.9em + var(--s));
   color: var(--color);
   --_p: var(--s);
   background:
-    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
-    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
   transition: .3s linear, color 0s, background-color 0s;
   outline: var(--b) solid #0000;
   outline-offset: .6em;
@@ -605,7 +618,7 @@ pointer-events: none;
 }
 
 .option:hover,
-.option:focus-visible{
+.option:focus-visible {
   --_p: 0px;
   outline-color: var(--color);
   outline-offset: .05em;
@@ -615,12 +628,14 @@ pointer-events: none;
   background: var(--color);
   color: #fff;
 }
+
 /* Questions options button design end */
 
 
 
-/* next button design */
-.nxt { 
+/* All the best button design*/
+.btnn2 {
+  --c: #fff;
   /* text color */
   background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p,100%)/300% no-repeat,
     #004dff;
@@ -628,8 +643,48 @@ pointer-events: none;
   color: #0000;
   border: none;
   transform: perspective(500px) rotateY(calc(20deg*var(--_i,-1)));
-  text-shadow: calc(var(--_i,-1)* 0.08em) -.01em 0 ,
+  text-shadow: calc(var(--_i,-1)* 0.08em) -.01em 0   var(--c),
     calc(var(--_i,-1)*-0.08em)  .01em 2px #0004;
+  outline-offset: .1em;
+  transition: 0.3s;
+}
+
+.btnn2:hover,
+.btnn2:focus-visible {
+  --_p: 0%;
+  --_i: 1;
+}
+
+.btnn2:active {
+  text-shadow: none;
+  color: var(--c);
+  box-shadow: inset 0 0 9e9q #0005;
+  transition: 0s;
+}
+
+.btnn2 {
+border: 1px solid black;
+  font-weight: bold;
+  font-size: 1.9rem;
+  margin: 0;
+  cursor: pointer;
+  padding: .1em .3em;
+}
+/* All the best button design end*/
+
+
+
+/* next button design */
+.nxt {
+  /* text color */
+  background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p, 100%)/300% no-repeat,
+    #004dff;
+  /* background color */
+  color: #0000;
+  border: none;
+  transform: perspective(500px) rotateY(calc(20deg*var(--_i, -1)));
+  text-shadow: calc(var(--_i, -1)* 0.08em) -.01em 0,
+    calc(var(--_i, -1)*-0.08em) .01em 2px #0004;
   outline-offset: .1em;
   transition: 0.3s;
 }
@@ -647,12 +702,13 @@ pointer-events: none;
 }
 
 .nxt {
- 
+
   font-size: 1rem;
   margin: 0;
   cursor: pointer;
   padding: .1em .3em;
 }
+
 /* next button design end*/
 
 
@@ -797,7 +853,7 @@ pointer-events: none;
     width: 100%;
     height: auto;
     overflow: hidden;
-  
+
   }
 
   .logo img {
@@ -850,6 +906,7 @@ pointer-events: none;
   }
 
 }
+
 @media only screen and (max-width: 800px) {
   .answer-options {
     grid-template-columns: 1fr;
@@ -945,6 +1002,7 @@ pointer-events: none;
     font-size: 15px;
   }
 }
+
 @media only screen and (max-width: 600px) {
   .result-container {
     width: 100vw;
@@ -964,10 +1022,12 @@ pointer-events: none;
 
 
 @keyframes rotate {
-	100% {
-		transform: rotate(1turn);
-	}
+  100% {
+    transform: rotate(1turn);
+  }
 }
+
+/* resopnsiveness end */
 
 
 

@@ -2,11 +2,13 @@ const ages = document.querySelector(".ages");
 let next3 = document.querySelector("#next3");
 // const nextbtn = document.querySelector(".next-button");
 ages.onclick = () => {
-    //     const show = document.querySelector(".input-val").value;
-    // if(show == ""){
-    // alert("Please Enter Name to Move Ahead")
-    // return;
-    // }
+
+     // enter name 
+        const show = document.querySelector(".input-val").value;
+    if(show == ""){
+    alert("Please Enter Name to Move Ahead")
+    return;
+    }// without name alert will be pop up
 
 
     categories.classList.add("disp");
@@ -18,6 +20,7 @@ ages.onclick = () => {
     Runtimer();
 };
 
+// by this code when will click on next button new quection will come
 next3.onclick = () => {
     if (question_count < Ages.length - 1) {
         question_count++;
@@ -26,12 +29,9 @@ next3.onclick = () => {
         score.innerHTML = "Score: " + userscore;
         showQuestionages(question_count);
         questionCountage(question_number);
-        //   next_button.classList.remove("show");
-        //   next2.classList.remove("show");
-        //   next3.classList.remove("show");
     } else {
         count++;
-        ShowResultSection();
+        ShowResultSection();   //after questions finished this Result box will be shown 
     }
 };
 
@@ -57,13 +57,13 @@ showQuestionages = (index) => {
 
     question_text.innerHTML = showQuestion;
     answer_options.innerHTML = showOptions;
-    const option = answer_options.querySelectorAll(".option");
+    const option = answer_options.querySelectorAll(".option"); //loop will run until end of questions 
     for (let i = 0; i < option.length; i++) {
         option[i].setAttribute("onclick", "optionSelectedages(this)"); //adding onclick event on options
     }
 };
 
-
+// green and red color will be added if answer is wrong or corrrect by this below code
 // This section compares answer of user selected with correct answer
 function optionSelectedages(answer) {
     let userAns = answer.textContent;
@@ -92,7 +92,7 @@ function optionSelectedages(answer) {
         answer_options.children[i].classList.add("disabled");
        
     }
-
+  // after clicking on options this show next button function will run
     next3.classList.add("show");
 }
 

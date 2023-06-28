@@ -4,11 +4,13 @@ const next_button = QuestionBox.querySelector("#next");
 
 
 probab.onclick = () => {
-    //     const show = document.querySelector(".input-val").value;
-    // if(show == ""){
-    // alert("Please Enter Name to Move Ahead")
-    // return;
-    // }
+
+// enter name
+        const show = document.querySelector(".input-val").value;
+    if(show == ""){
+    alert("Please Enter Name to Move Ahead")
+    return;
+    }// without name alert will be pop up
 
 
     categories.classList.add("disp");
@@ -20,6 +22,7 @@ probab.onclick = () => {
     Runtimer();
 };
 
+// by this code when will click on next button new quection will come
 next_button.onclick = () => {
     if (question_count < PROBABILITY.length - 1) {
         question_count++;
@@ -31,7 +34,7 @@ next_button.onclick = () => {
         // next_button.classList.remove("show");
     } else {
         count++;
-        ShowResultSection();
+        ShowResultSection();   //after questions finished this Result box will be shown 
     }
 };
 
@@ -50,13 +53,14 @@ showQuestionprobab = (index) => {
     question_text.innerHTML = showQuestion;
     answer_options.innerHTML = showOptions;
     
-    const option = answer_options.querySelectorAll(".option")
-    for (let i = 0; i < option.length; i++) {
+    const option = answer_options.querySelectorAll(".option")   //loop will run until end of questions 
+    for (let i = 0; i < option.length; i++) {   
 
         option[i].setAttribute("onclick", "optionSelected(this)");
     }
 };
 
+// green and red color will be added if answer is wrong or corrrect by this below code
 function optionSelected(answer) {
     let userAns = answer.textContent;
     let correctAns = PROBABILITY[question_count].answer;
@@ -77,10 +81,11 @@ function optionSelected(answer) {
         }
 
     }
-
+/* when we click on 1 option then this disabled function will run */
     for (let i = 0; i < alloptions; i++) {
         answer_options.children[i].classList.add("disabled");
     }
+    // after clicking on options this show next button function will run
     next_button.classList.add("show")
 }
 function questionCountprob(index) {

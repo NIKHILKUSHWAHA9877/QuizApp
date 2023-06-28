@@ -3,12 +3,16 @@ let next4 = document.querySelector("#next4");
 
 
 profit.onclick = () =>{
-    // const val = document.querySelector(".input-val").value;
 
-    // if (val == "") {
-    //   alert("Please Enter Name Before Choosing Category");
-    //   return;
-    // }
+    // enter name 
+    const val = document.querySelector(".input-val").value;
+
+    if (val == "") {
+      alert("Please Enter Name Before Choosing Category");
+      return;
+    } 
+// without name alert will be pop up
+
 categories.classList.add("disp");
 QuestionBox.classList.add("activeQuiz");
 document.querySelector(".title-bar").innerHTML = "PROFIT & LOSS"
@@ -18,6 +22,8 @@ printname();
 Runtimer();
 
 }
+
+// by this code when will click on next button new quection will come
 next4.onclick = () => {
 if(question_count < PROFIT.length - 1){
 question_count++;
@@ -30,7 +36,7 @@ queCounterprof_loss(question_number);
 }
 else{
 count++;
-ShowResultSection(); 
+ShowResultSection();    //after questions finished this Result box will be shown 
 }
 }
 
@@ -50,12 +56,13 @@ PROFIT[index].option[3] +
 "</span>";
 question_text.innerHTML = showQuestion;
 answer_options.innerHTML = showOptions;
-const option = answer_options.querySelectorAll(".option")
+const option = answer_options.querySelectorAll(".option")   //loop will run until end of questions 
 for(let i = 0 ; i< option.length;i++){
     option[i].setAttribute("onclick" , "optionSelectedProfit_loss(this)");
 }
 
 }
+// green and red color will be added if answer is wrong or corrrect by this below code
 function optionSelectedProfit_loss(answer){
     let userAns = answer.textContent;
     let correctAns = PROFIT[question_count].answer;
@@ -76,11 +83,11 @@ function optionSelectedProfit_loss(answer){
           }
         }
       } 
-
+  /* when we click on 1 option then this disabled function will run */
       for (let i = 0; i < alloptions; i++) {
         answer_options.children[i].classList.add("disabled");
       }
-    
+      // after clicking on options this show next button function will run
       next4.classList.add("show");
     }
     
