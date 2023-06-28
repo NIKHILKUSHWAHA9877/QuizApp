@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="quizapp2.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Bangers&family=Bungee+Inline&family=Holtwood+One+SC&family=Jockey+One&family=Montserrat+Subrayada&family=Montserrat:ital,wght@0,300;1,500&family=Press+Start+2P&family=Prompt&family=Tomorrow:wght@300&family=Wallpoet&display=swap" rel="stylesheet">
+  <title>Quiz App</title>
+</head>
+
+<body>
+
+  <h3 style="color: white;">Created By NIKHIL</h3>
+
+  <!-- Categories Select here -->
+  <div class="categories-box">
+
+    <div class="logo">
+      <!-- logo added here  -->
+      <img src="logo.png">
+    </div>
+
+    <!-- upper section starts here -->
+    <div class="upper-section">
+      <h2 class="header-style">Hello User!</h2>
+      <h3>Enter Your Name to Continue.</h3>
+    </div>
+    <!-- upper section starts here -->
+
+    <!-- This is user name input section -->
+    <div class="user-input">
+
+      <div class="enter-name">
+        <input class="input-val" name="value" type="text" placeholder="Enter your name">
+      </div>
+      <div class="submit-name">
+
+        <button class="btn-submit btnn" type="button" onclick="printname()">
+          Enter
+        </button>
+      </div>
+
+    </div>
+
+
+    <div id="displayname"> </div>
+
+    <!-- user name input section  ends here-->
+
+    <div class="line"> </div>
+
+<hr>
+    <div class="heading-bottom">
+      <h2 class="header-style">Select Category</h2>
+    </div>
+
+    <!-- bottom section starts from here -->
+    <div class="bottom-section">
+
+      <div class="btn-bottom">
+        <button class="probab btnn"  type="button">PROBABILITY</button>
+        <button class="pipe btnn" type="button">PIPES_AND_CISTERNS</button>
+        <button class="ages btnn" type="button">PROBLEMS_ON_AGES</button>
+        <button class="profit_loss btnn" type="button">PROFITS_AND_LOSSES</button>
+      </div>
+
+      <!-- bottom section Ends  here -->
+    </div>
+
+
+    <div class="backbtn">
+      <div class="container">
+      <button  class="btnn" id="confetti">All The Best</button>
+    </div>
+    </div>
+  </div>
+  <!-- Categories Select ends here -->
+
+
+
+  <div class="box">
+  <!-- Quiz Box Starts here -->
+  <div class="Question-box">
+    <!-- Title on which topics questions will be displayed -->
+    <span class="name"></span>
+    <div class="title-bar"></div>
+    <!-- score and timer section added here -->
+    <div class="score-timer">
+      <div id="timer">00</div>
+      <div id="score">score: 0</div>
+    </div>
+
+    <fieldset>
+      <legend class="qucount">
+        <span></span>
+      </legend>
+      <div class="Question">
+        <span></span>
+      </div>
+    </fieldset>
+
+    <!-- Answer Options  starts here -->
+    <div class="answer-options">
+      <button type="button" class="option"></button>
+      <button type="button" class="option"></button>
+      <button type="button" class="option"></button>
+      <button type="button" class="option"></button>
+    </div>
+
+    <!-- Next button for next question -->
+    <div class="next-button">
+      <!-- These are seperate next buttons for every section -->
+      <button type="button" id="next" class="nxt">Next</button>
+      <button type="button" id="next2" class="nxt">Next</button>
+      <button type="button" id="next3" class="nxt">Next</button>
+      <button type="button" id="next4" class="nxt">Next</button>
+    </div>
+  </div>
+  </div>
+  
+ 
+
+  <!-- Quiz Box Ends here -->
+
+
+
+
+
+  <!-- Result Box Starts here -->
+  <div class="result-container">
+    <h2>Quiz Result</h2>
+    <div class="name-result"></div>
+    <div class="time_taken"></div>
+    <div class="attempts">Attempt :</div>
+    <div class="correct"></div>
+    <div class="wrong"></div>
+    <div class="Percentage"></div>
+    <div class="buttons">
+      <button class="home" type="button">Go To Home</button>
+      <button type="button" class="home">Start Again</button>
+    </div>
+  </div>
+
+
+  <!-- Result Box Ends here -->
+
+
+ 
+
+  <script src="quizapp2.js"></script>
+  <script src="probability.js"></script>
+  <script src="ages.js"></script>
+  <script src="PIPE.js"></script>
+  <script src="ProfitLoss.js"></script>
+  <script src="confetti.js" type="module"></script>
+  <script src="questionQuiz.js"></script>
+</body>
+</html>
